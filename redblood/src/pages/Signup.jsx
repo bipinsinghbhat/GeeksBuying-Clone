@@ -43,9 +43,8 @@ import {
     if(userEmail===Neededemail && userPassword===Neededpw){
         SetisAuth(true)
          alert('Login Successful')
-         if(SetisAuth){
-            return  <Link to='/'></Link>
-         }
+       
+         
     }
    
 
