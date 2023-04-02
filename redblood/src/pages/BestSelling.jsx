@@ -251,7 +251,7 @@ const NewArrivals=()=>{
       <Box>
      <SimpleGrid columns={{base:2,sm:2,md:3,lg:4}} spacing={4} >
            {datas.length>0 && datas.map((el) => (
-          <Link  to= {`/newarrivals/${el.id}`} key={el.id}>
+          <Link  to= {`/best/${el.id}`} key={el.id}>
           <Box 
            onClick={()=>handleAddToCart(el)}
            key={el.id}

@@ -20,7 +20,7 @@ import {
   } from '@chakra-ui/react';
  
   import { AuthContext } from '../content/AuthContext';
-  import { Navigate } from "react-router-dom"; 
+  import { NavLink, Navigate } from "react-router-dom"; 
   
   
   
@@ -38,14 +38,14 @@ import {
  
 
   const HandleSignIn =()=>{
+    
     console.log(userEmail, userPassword)
 
     if(userEmail===Neededemail && userPassword===Neededpw){
         SetisAuth(true)
          alert('Login Successful')
-       
-         
-    }
+      }
+     
    
 
     else{

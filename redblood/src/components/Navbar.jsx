@@ -2,8 +2,8 @@ import { Flex, HStack, Spacer,Center,Text,Box,Image,VStack,Stack} from '@chakra-
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Link, Link as RouterLink} from 'react-router-dom'
-
-
+import {Icon} from '@chakra-ui/icons'
+import { IconName ,HiOutlineShoppingBag} from "react-icons/hi";
 
 function Navbar(){
     return (
@@ -42,7 +42,7 @@ function Navbar(){
         </Box >
          <Box pl="100px" >
            
-            <Input placeholder='medium size' height="35px" width="300px"  borderRadius="20px"/>
+            <Input placeholder='Search' height="35px" width="300px"  borderRadius="20px"  />
            </Box>
 
        <HStack spacing="30px" pl="60px">
@@ -50,7 +50,7 @@ function Navbar(){
        
         <Link to='/signup'>SignIn</Link>
         <Link to='/admin'>SignIn as Admin</Link>
-
+        <Icon as={HiOutlineShoppingBag} />
        </HStack>
        </HStack>
 

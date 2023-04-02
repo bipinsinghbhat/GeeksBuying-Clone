@@ -1,3 +1,7 @@
+// npm install react-icons --save
+
+
+
 import { Box, Button, Image, VStack,Text,Container, HStack} from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -11,6 +15,8 @@ import { Link, useParams } from 'react-router-dom';
 // import {ImMail4} from 'react-icons/im';
 // import { useContext } from 'react';
 // import { CartContext } from '../CartContextProvider';
+
+
 
 
  const SingleProductPage = () => {
@@ -35,6 +41,12 @@ import { Link, useParams } from 'react-router-dom';
   
 //    console.log("cartData",cartData)
 
+const handleClick=()=>{
+    console.log("t")
+    alert("Order Placed")
+  }
+
+
   useEffect(() => {
     singleProductData();
   }, [id])
@@ -58,7 +70,7 @@ import { Link, useParams } from 'react-router-dom';
 
           <VStack   h='450px' bg='white' w='40%'> 
         
-          <Image className="hoverToIncreaseWidth"   src={singleData.PicturePath} alt="image" w='90%' h='90%'/>
+          <Image className="hoverToIncreaseWidth"   src={singleData.image_url} alt="image" w='90%' h='90%'/>
           
           <Box>
             <HStack className='img-hover'>
@@ -95,9 +107,9 @@ import { Link, useParams } from 'react-router-dom';
               </HStack>
              
                 <HStack ml='12px'>
-                   <Text  fontSize='3xl' fontWeight='600'> ${singleData.price}</Text>
-                   <Text fontSize='lg' as='del'> ₹{singleData.strikedoffprice
-}</Text>
+                   <Text  fontSize='3xl' fontWeight='600'> Rs {singleData.price}</Text>
+                   <Button onClick={()=>handleClick()}>Buy</Button>
+          
               </HStack>   
               <Text fontSize='xs' color='gray'>inclusive of all Taxes</Text>
               <Box>
@@ -139,13 +151,12 @@ import { Link, useParams } from 'react-router-dom';
                     <i className='tax-img product-img'></i>
                  </span>
                </Box>
+               <br />
+              
             </Box>
        </Box>
   </HStack> 
-  <VStack mt='60px'>
-    <img src={singleData.BottomImageF} alt="" /> 
-    <img src={singleData.BottomImageS} alt="" /> 
-</VStack>
+ 
 </Box>
   )
 }
