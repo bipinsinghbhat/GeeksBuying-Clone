@@ -37,8 +37,8 @@ function Navbar(){
      <hr />
         <HStack>
         <Box  pl="80px">
-          <img src="https://tse4.mm.bing.net/th?id=OIP.cqvQVnmeLMUvmz5pHZ2MfgAAAA&pid=Api&P=0" alt="hlo" border="2px solid red" width="120px" height="60px"
-         />
+         <a href="/"><img src="https://tse4.mm.bing.net/th?id=OIP.cqvQVnmeLMUvmz5pHZ2MfgAAAA&pid=Api&P=0" alt="hlo" border="2px solid red" width="120px" height="60px"
+         /></a>
         </Box >
          <Box pl="100px" >
            
@@ -49,7 +49,7 @@ function Navbar(){
         <h3>Ship to IND/INR</h3>
        
         <Link to='/signup'>SignIn</Link>
-          
+        <Link to='/admin'>SignIn as Admin</Link>
 
        </HStack>
        </HStack>
